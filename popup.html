@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Classroom Bulk Downloader</h1>
+      <button id="rescan" class="ghost" title="Scan the page again">⟳</button>
+    </header>
+
+    <div id="toolbar" class="hidden">
+      <label class="selall">
+        <input type="checkbox" id="selectAll" checked />
+        <span id="count">0 files</span>
+      </label>
+      <input type="search" id="filter" placeholder="Filter by name…" />
+    </div>
+
+    <ul id="list"></ul>
+
+    <p id="message" class="message"></p>
+
+    <footer>
+      <button id="download" disabled>Download selected</button>
+    </footer>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+# build output
+*.zip
+
+# raw screenshots (the cleaned 1280x800 copies live in store-assets/)
+/Screenshot*.png
+
+# OS / editor junk
+Thumbs.db
+.DS_Store
+.vscode/

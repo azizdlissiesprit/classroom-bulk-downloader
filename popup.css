@@ -1,0 +1,144 @@
+:root {
+  --bg: #ffffff;
+  --fg: #202124;
+  --muted: #5f6368;
+  --line: #e0e0e0;
+  --accent: #1a73e8;
+  --accent-fg: #ffffff;
+  --hover: #f1f3f4;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  width: 360px;
+  margin: 0;
+  font-family: "Roboto", "Segoe UI", system-ui, sans-serif;
+  color: var(--fg);
+  background: var(--bg);
+  font-size: 13px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+h1 {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+}
+
+#toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.selall {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+#count { color: var(--muted); }
+
+#filter {
+  flex: 1;
+  min-width: 0;
+  padding: 5px 8px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-size: 12px;
+}
+
+ul#list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 340px;
+  overflow-y: auto;
+}
+
+li.row {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 14px;
+  border-bottom: 1px solid var(--line);
+  cursor: pointer;
+}
+
+li.row:hover { background: var(--hover); }
+li.row.hidden { display: none; }
+li.row.uncertain .name { color: var(--muted); font-style: italic; }
+
+li.row .badge {
+  flex: none;
+  width: 42px;
+  text-align: center;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  padding: 3px 0;
+  border-radius: 4px;
+  color: var(--accent-fg);
+  background: var(--muted);
+}
+
+li.row .name {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.message {
+  margin: 0;
+  padding: 14px;
+  color: var(--muted);
+  text-align: center;
+}
+.message.error { color: #d93025; }
+.message:empty { display: none; }
+
+footer {
+  padding: 10px 14px;
+  border-top: 1px solid var(--line);
+}
+
+#download {
+  width: 100%;
+  padding: 9px;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent);
+  color: var(--accent-fg);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#download:disabled { background: #c6dafc; cursor: not-allowed; }
+
+button.ghost {
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  cursor: pointer;
+  color: var(--muted);
+  border-radius: 6px;
+  padding: 2px 6px;
+}
+button.ghost:hover { background: var(--hover); }
+
+.hidden { display: none !important; }
