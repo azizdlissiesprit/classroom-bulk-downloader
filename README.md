@@ -56,4 +56,4 @@ reuses your existing browser session, so it only downloads what you can already 
 ## Firefox
 Firefox supports Manifest V3 but uses the `browser.*` namespace and `scripting` differs
 slightly. The quickest path is to keep `chrome.*` (Firefox aliases it) and load via
-`about:debugging` → *This Firefox* → *Load Temporary Add-on*. Ask if you want a Firefox build.
+`about:debugging` → *This Firefox* → *Load Temporary Add-on*.
